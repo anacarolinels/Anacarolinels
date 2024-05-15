@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamentos de Filmes</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Lançamentos de Filmes</h1>
+    </header>
+    
+    <section id="imagens">
+        <figure>
+            <img src="duna2.jpg" alt="Filme 1">
+            <figcaption>Duna 2 - Ficção científica</figcaption>
+        </figure>
+        <figure>
+            <img src="pobrescriaturas.jpeg" alt="Filme 2">
+            <figcaption>Pobres Criaturas - Comédia/Fantasia</figcaption>
+        </figure>
+        <figure>
+            <img src="kungfupanda4.jpg" alt="Filme 3">
+            <figcaption>Kung Fu Panda 4 - Comédia/Aventura</figcaption>
+        </figure>
+    </section>
+
+    <section id="lancamentos">
+        <h2>Para saber mais:</h2>
+        <ul>
+            <li><a href="https://pt.wikipedia.org/wiki/Dune:_Part_Two" target="_blank">WIKIPÉDIA - DUNA 2</a></li>
+            <li><a href="https://pt.wikipedia.org/wiki/Pobres_Criaturas" target="_blank">WIKIPÉDIA - POBRES CRIATURAS</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Kung_Fu_Panda_4" target="_blank">WIKIPÉDIA - KUNG FU PANDA 4</a></li>
+        </ul>
+    </section>
+
+    <section id="form">
+        <h2>Deixe seu comentário</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone">
+            <label for="comentario">Comentário:</label>
+            <textarea id="comentario" name="comentario" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
