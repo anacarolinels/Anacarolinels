@@ -1,0 +1,43 @@
+/* Reset básico para margem e padding */
+body, h1, p, div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para a caixa */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Faz com que o padding e border sejam incluídos na largura e altura */
+    background-color: #f4f4f4;
+}
+
+.box {
+    width: 45%;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #020202;
+    background-color: #b63796;
+    box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+/* Flutuando as caixas */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.no-float {
+    clear: both; /* Limpa os elementos flutuantes à esquerda e à direita */
+}
+
+/* Limpeza de floats */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

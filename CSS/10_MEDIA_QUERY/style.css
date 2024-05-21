@@ -1,0 +1,62 @@
+/* Reset básico para margem e padding */
+body, h1, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e border na largura e altura */
+}
+
+/* Estilos para a container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Estilos para os quadros */
+.box {
+    width: 48%; /* Definido como 48% para margem */
+    margin: 1%;
+    padding: 20px;
+    border: 2px solid #333333;
+    background-color: #328d0e;
+    float: left;
+    text-align: center;
+}
+
+/* Limpeza de floats */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+    .box {
+        width: 98%; /* 98% de largura para margem */
+        margin: 1%;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    .box {
+        width: 48%; /* Dois quadros por linha */
+        margin: 1%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .box:nth-child(1),
+    .box:nth-child(2) {
+        width: 48%; /* Dois quadros na primeira linha */
+        margin: 1%;
+    }
+
+    .box:nth-child(3),
+    .box:nth-child(4),
+    .box:nth-child(5),
+    .box:nth-child(6) {
+        width: 23%; /* Quatro quadros na segunda linha */
+        margin: 1%;
+    }
+}

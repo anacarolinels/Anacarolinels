@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Parte 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Grid Layout Parte 2</h1>
+
+    <section id="grid-position">
+        <h2>Grid Column/Row Start & End</h2>
+        <div class="grid-position">
+            <div class="item" style="grid-column-start: 1; grid-column-end: 3; grid-row-start: 1; grid-row-end: 3;">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+    </section>
+
+    <section id="grid-column-row">
+        <h2>Grid Column & Row</h2>
+        <div class="grid-column-row">
+            <div class="item" style="grid-column: 1 / 3; grid-row: 1 / 3;">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+    </section>
+
+    <section id="grid-area">
+        <h2>Grid Area</h2>
+        <div class="grid-area">
+            <div class="item" style="grid-area: 1 / 1 / 3 / 3;">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+    </section>
+
+    <section id="justify-self">
+        <h2>Justify Self</h2>
+        <div class="justify-self">
+            <div class="item" style="justify-self: start;">1</div>
+            <div class="item" style="justify-self: center;">2</div>
+            <div class="item" style="justify-self: end;">3</div>
+            <div class="item" style="justify-self: stretch;">4</div>
+        </div>
+    </section>
+
+    <section id="align-self">
+        <h2>Align Self</h2>
+        <div class="align-self">
+            <div class="item" style="align-self: start;">1</div>
+            <div class="item" style="align-self: center;">2</div>
+            <div class="item" style="align-self: end;">3</div>
+            <div class="item" style="align-self: stretch;">4</div>
+        </div>
+    </section>
+
+    <section id="place-self">
+        <h2>Place Self</h2>
+        <div class="place-self">
+            <div class="item" style="place-self: start start;">1</div>
+            <div class="item" style="place-self: center center;">2</div>
+            <div class="item" style="place-self: end end;">3</div>
+            <div class="item" style="place-self: stretch stretch;">4</div>
+        </div>
+    </section>
+</body>
+</html>

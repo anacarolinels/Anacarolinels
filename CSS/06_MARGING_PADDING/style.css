@@ -1,0 +1,39 @@
+/* Estilos para as divisões */
+.div1 {
+    margin-top: 20px;
+    margin-left: 15px;
+    padding: 10px;
+    border: 2px solid blue;
+    border-top-style: dotted;
+}
+
+.div2 {
+    margin-right: 25px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 2px solid green;
+}
+
+.div3 {
+    margin: 20px 10px 30px 40px; /* margin: top right bottom left */
+    padding: 5px 15px 10px 20px; /* padding: top right bottom left */
+    border: 2px solid red;
+}
+
+/* Estilos para as âncoras */
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid black;
+    background-color: lightgray;
+    text-decoration: none; /* Remove o aspecto de hiperlink */
+    color: black;
+    border-radius: 5px; /* Deixa com formato de botão */
+}
+
+/* Adicionando efeito ao passar o mouse */
+.botao:hover {
+    background-color: gray;
+    color: white;
+}

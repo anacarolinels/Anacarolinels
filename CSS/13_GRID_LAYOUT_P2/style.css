@@ -1,0 +1,79 @@
+/* Reset básico para margem e padding */
+body, h1, h2, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Estilos básicos para os itens */
+.item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 1.2em;
+}
+
+/* Grid Position (grid-column-start, grid-row-start, grid-column-end, grid-row-end) */
+.grid-position {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+/* Grid Column & Row */
+.grid-column-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+/* Grid Area */
+.grid-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+/* Justify Self */
+.justify-self {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+}
+
+/* Align Self */
+.align-self {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    height: 200px; /* Para visualizar melhor o alinhamento */
+}
+
+/* Place Self */
+.place-self {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    height: 200px; /* Para visualizar melhor o alinhamento */
+}
