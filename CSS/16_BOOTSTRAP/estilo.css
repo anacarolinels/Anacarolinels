@@ -1,0 +1,27 @@
+body {
+    background-color: #91afce;
+}
+
+h1, h2 {
+    color: #343a40;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.btn-group {
+    margin-top: 20px;
+}
+
+.list-group-flush {
+    margin-top: 20px;
+}
