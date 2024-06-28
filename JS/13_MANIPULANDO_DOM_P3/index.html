@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Seções e Botões</title>
+    <style>
+        /* Estilo básico para visualização */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .highlight {
+            background-color: rgb(255, 73, 128);
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // Função para mudar a cor de fundo de um parágrafo da primeira seção
+            document.getElementById("changeColorBtn").onclick = function() {
+                var firstParagraph = document.querySelector("section:first-of-type p");
+                if (firstParagraph) {
+                    firstParagraph.style.backgroundColor = "lightblue";
+                }
+            };
+
+            // Função para marcar todos os parágrafos da segunda seção
+            document.getElementById("highlightAllBtn").onclick = function() {
+                var paragraphs = document.querySelectorAll("section:nth-of-type(2) p");
+                paragraphs.forEach(function(paragraph) {
+                    paragraph.classList.toggle("highlight");
+                });
+            };
+        };
+    </script>
+</head>
+<body>
+    <!-- Primeira seção -->
+    <section>
+        <h2>Título da Primeira Seção</h2>
+        <p>Parágrafo 1 da Primeira Seção</p>
+        <p>Parágrafo 2 da Primeira Seção</p>
+        <p>Parágrafo 3 da Primeira Seção</p>
+    </section>
+    
+    <!-- Segunda seção -->
+    <section>
+        <h2>Título da Segunda Seção</h2>
+        <p>Parágrafo 1 da Segunda Seção</p>
+        <p>Parágrafo 2 da Segunda Seção</p>
+        <p>Parágrafo 3 da Segunda Seção</p>
+    </section>
+
+    <!-- Botões -->
+    <button id="changeColorBtn">Mudar Cor de Fundo do Primeiro Parágrafo</button>
+    <button id="highlightAllBtn">Destacar Todos os Parágrafos da Segunda Seção</button>
+</body>
+</html>

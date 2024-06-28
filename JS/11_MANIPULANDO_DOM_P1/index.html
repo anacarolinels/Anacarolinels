@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <script>
+        // Exibir mensagem de boas vindas na entrada
+        window.onload = function() {
+            alert('Bem-vindo à minha página!');
+
+            // Informar o título da página
+            document.title = "Minha Página";
+
+            // Criar elementos novos
+            var section = document.createElement("section");
+            var article = document.createElement("article");
+
+            // Criar título e parágrafo para a section
+            var sectionTitle = document.createElement("h1");
+            var sectionParagraph = document.createElement("p");
+            sectionTitle.textContent = "Título da Seção";
+            sectionParagraph.textContent = "Este é um parágrafo dentro da seção.";
+
+            // Adicionar título e parágrafo à section
+            section.appendChild(sectionTitle);
+            section.appendChild(sectionParagraph);
+
+            // Criar título e parágrafo para o article
+            var articleTitle = document.createElement("h1");
+            var articleParagraph = document.createElement("p");
+            articleTitle.textContent = "Título do Artigo";
+            articleParagraph.textContent = "Este é um parágrafo dentro do artigo.";
+
+            // Adicionar título e parágrafo ao article
+            article.appendChild(articleTitle);
+            article.appendChild(articleParagraph);
+
+            // Adicionar section e article ao corpo da página
+            document.body.appendChild(section);
+            document.body.appendChild(article);
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
