@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens de Gatos</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .cat-image {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Imagens aleatórias de gatos</h2>
+        <button id="newImagesBtn" class="btn btn-primary mb-4">Trocar Imagens</button>
+        <div id="catImages" class="row"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const catImagesContainer = document.getElementById('catImages');
+            const newImagesBtn = document.getElementById('newImagesBtn');
+
+            function fetchCatImages() {
+                fetch('https://api.thecatapi.com/v1/images/search?limit=10')
+                    .then(response => response.json())
+                    .then(data => {
+                        catImagesContainer.innerHTML = '';
+                        data.forEach(cat => {
+                            const colDiv = document.createElement('div');
+                            colDiv.className = 'col-md-4 mb-4';
+                            
+                            const img = document.createElement('img');
+                            img.src = cat.url;
+                            img.alt = 'Imagem de um gato';
+                            img.className = 'cat-image img-fluid';
+
+                            colDiv.appendChild(img);
+                            catImagesContainer.appendChild(colDiv);
+                        });
+                    })
+                    .catch(error => console.error('Erro ao buscar imagens de gatos:', error));
+            }
+
+            // Fetch initial set of images
+            fetchCatImages();
+
+            // Fetch new set of images on button click
+            newImagesBtn.addEventListener('click', fetchCatImages);
+        });
+    </script>
+</body>
+</html>
